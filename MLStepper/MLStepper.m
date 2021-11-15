@@ -37,10 +37,10 @@
 }
 
 -(void)initData{
+    _stepValue = 1;
+    _minValue = 0;
+    _maxValue = 99;
     self.isValueEditable = true;
-    self.stepValue = 1;
-    self.minValue = 0;
-    self.maxValue = 99;
     self.value = _minValue;
 }
 
@@ -103,11 +103,11 @@
 }
 
 -(void)setMaxValue:(double)maxValue{
-    _maxValue = maxValue < _minValue ? _minValue : maxValue;
+    _maxValue = maxValue;
 }
 
 -(void)setMinValue:(double)minValue{
-    _minValue = minValue > _maxValue ? _maxValue : minValue;
+    _minValue = minValue;
 }
 
 -(void)setIsValueEditable:(BOOL)isValueEditable{
