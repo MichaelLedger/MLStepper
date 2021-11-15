@@ -27,7 +27,7 @@
         weakSelf.stepperValueLabel.text = [NSString stringWithFormat:@"%.f", value];
     };
 
-    MLStepper *customStepper = [[MLStepper alloc] initWithFrame:CGRectMake(0, 0, 180, 60)];
+    MLStepper *customStepper = [[MLStepper alloc] init];
     [self.view addSubview:customStepper];
 
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:customStepper attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:180]];

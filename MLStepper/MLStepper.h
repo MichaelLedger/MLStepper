@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^HYStepperCallback)(double value);
+typedef void(^MLStepperCallback)(double value);
 
 @interface MLStepper : UIView
 
@@ -18,6 +18,6 @@ typedef void(^HYStepperCallback)(double value);
 @property(nonatomic)double value;
 @property(nonatomic)double stepValue;
 
-@property(nonatomic,copy)HYStepperCallback valueChanged;
+@property(nonatomic,copy)MLStepperCallback valueChanged;
 
 @end

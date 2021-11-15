@@ -41,12 +41,12 @@ A customized stepper component is same as UIStepper in OC.
 
 // 最大值
 -(void)setMaxValue:(double)maxValue{
-    _maxValue = maxValue;
+    _maxValue = maxValue < _minValue ? _minValue : maxValue;
 }
 
 // 最小值
 -(void)setMinValue:(double)minValue{
-    _minValue = minValue;
+    _minValue = minValue > _maxValue ? _maxValue : minValue;
 }
 
 // 是否可输入值
